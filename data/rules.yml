@@ -1,0 +1,20 @@
+version: "3.0"
+
+rules:
+#  - rule: activate address_form
+#    steps:
+#    - intent: request
+#    - action: address_form
+#    - active_loop: address_form
+
+#  - rule: submit form
+#    condition:
+#    - active_loop: address_form
+#    steps:
+#    - action: address_form
+#    - action: utter_greet
+#    - action: utter_address
+#    - action: utter_number
+#    - action: utter_district
+#    - action: utter_reference
+#    - active_loop: null

@@ -1,0 +1,125 @@
+version: "3.0"
+
+nlu:
+- intent: intent_greet
+  examples: |
+    - Ola
+    - Como vai
+    - Preciso de ajuda
+    - Bom dia
+    - Boa noite
+    - Boa tarde
+- intent: intent_request
+  examples: |
+    - Gostaria de fazer um pedido
+    - Quero fazer um pedido
+    - Quero comer
+    - Quero me alimentar
+- intent: intent_address
+  examples: |
+    - [Rua da Monarquia](address)
+    - [Rua do Artista](address)
+    - [Rua Marcílio Dias](address)
+    - [Rua Dr. Munir Thomé](address)
+    - [Alameda 3](address)
+    - [Rua Coronel João G. de Oliveira](address)
+    - [Rua Doutor Orestes Prata Tibery](address)
+    - [Rua New York](address)
+    - [Rua Bulgária](address)
+    - [Rua Itacil Pereira Martins](address)
+    - [Rua Coronel Augusto Corrêa da Costa](address)
+    - [Rua A](address)
+    - [Rua Calçadão ll](address)
+    - [Avenida Professor João Thomes](address)
+    - [Rua Advogado Sabino José da Costa](address)
+    - [Rua Projetada 08](address)
+    - [Rua K](address)
+    - [Rua Michel Thomé](address)
+    - [Rua João Carrato](address)
+    - [Rua Euclides da Cunha](address)
+    - [Rua Rolando Lero](address)
+    - [Rua Coronel João G. de Oliveira](address)
+    - [Rua José Amílcar Congro Bastos](address)
+    - [Rua José Palma](address)
+    - [Rua Doutor Orestes Prata Tibery](address)
+    - [Rua A](address)
+    - [Travessa Nereu Fontes](address)
+    - [Rua 14](address)
+    - [Rua Abílio Ferreira](address)
+    - [Rua Maria Guilhermina Esteves](address)
+- intent: intent_number
+  examples: |
+    - [947](number)
+    - [479](number)
+    - [272](number)
+    - [466](number)
+    - [686](number)
+    - [931](number)
+    - [415](number)
+    - [776](number)
+    - [499](number)
+    - [233](number)
+- intent: intent_district
+  examples: |
+    - [Santos Dumont](district)
+    - [Nova Europa](district)
+    - [Vila Maria](district)
+    - [Jardim Primaveril](district)
+    - [Centro](district)
+    - [Parque Residencial Osmar F Dutra](district)
+    - [Jardim das Violetas](district)
+    - [Conjunto Habitacional Imperial](district)
+- intent: intent_reference
+  examples: |
+    - [Proximo a escola bom jesus](reference)
+    - [Na esquina da construtora constroi](reference)
+    - [No meio do quarteirão](reference)
+    - [Proximo ao bar do marcao](reference)
+    - [Não possui](reference)
+- intent: intent_name
+  examples: |
+    - [Francisco Diogo Roberto Drumond](name)
+    - [Ayla Analu Débora da Cunha](name)
+    - [Daniel Paulo Edson Lopes](name)
+    - [Esther Aline Pietra Dias](name)
+    - [Daiane Márcia Aragão](name)
+    - [Sebastiana Luzia Carvalho](name)
+    - [Emilly Jennifer da Luz](name)
+    - [Agatha Giovana Hadassa da Cruz](name)
+    - [Guilherme Ian Thales da Paz](name)
+    - [Benedito Caleb Levi Cardoso](name)
+- intent: intent_phone
+  examples: |
+    - [(67) 9 8710-2722](phone_entity)
+    - [(67) 9 8607-2640](phone)
+    - [(67) 9 9290-8205](phone)
+    - [(67) 9 8181-3380](phone)
+    - [(67) 9 8601-7202](phone)
+    - [(67) 9 9469-8864](phone)
+    - [(67) 9 9385-8608](phone)
+    - [(67) 9 8500-4568](phone)
+    - [(67) 9 8943-7656](phone)
+    - [(67) 9 8913-5285](phone)
+- intent: intent_cpf
+  examples: |
+    - [366.009.211-88](cpf_entity)
+    - [211.419.831-68](cpf_entity)
+    - [196.305.531-47](cpf_entity)
+    - [140.392.181-40](cpf_entity)
+    - [640.312.111-12](cpf_entity)
+    - [145.521.211-38](cpf_entity)
+    - [412.416.871-37](cpf_entity)
+    - [629.396.291-53](cpf_entity)
+    - [536.719.671-37](cpf_entity)
+- intent: intent_positive_account
+  examples: |
+    - [Sim](positive_entity)
+- intent: intent_negative_account
+  examples: |
+    - [Não](negative_entity)
+- intent: intent_burguer_option
+  examples: |
+    - [X-Burguer](hamburguer_entity)
+    - [X-Salada](hamburguer_entity)
+    - [X-Cheedar](hamburguer_entity)
+    - [X-Infarto](hamburguer_entity)

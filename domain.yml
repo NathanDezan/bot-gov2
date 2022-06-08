@@ -1,0 +1,129 @@
+version: "3.0"
+
+intents:
+  - intent_greet
+  - intent_request
+  - intent_address
+  - intent_number
+  - intent_district
+  - intent_reference
+  - intent_name
+  - intent_phone
+  - intent_cpf
+  - intent_positive_account
+  - intent_negative_account
+  - intent_burguer_option
+entities:
+# - address
+# - number
+# - district
+# - reference
+  - name_entity
+# - phone
+  - cpf_entity
+  - positive_entity
+  - negative_entity
+  - hamburguer_entity
+actions:
+  - utter_greet
+  - utter_request
+  - utter_address
+  - utter_number
+  - utter_district
+  - utter_reference
+  - utter_cpf
+  - utter_cpf_response
+  - action_function
+  - action_request
+responses:
+  utter_greet:
+  - text: "Olá, como vai sou o RAJ Bot?"
+  utter_request:
+  - text: "Segue abaixo o nosso cardapio:\n1-X-Bacon (1x Hamburguer, 1x Queijo Mussarela, 1x Bacon, 1x Tomate, 1x Alface) - R$15,00\n2-X-Salada (1x Hamburguer, 1x Queijo Mussarela, 1x Queijo Cheedar, 1x Rucula, 1x Tomate, 1x Alface) - R$12,00\n3-X-Infarto (2x Hamburguer, 2x Queijo Mussarela, 2x Bacon, 2x Tomate, 2x Alface, 2x Queijo Cheedar, 2x Presunto, 2x Salsicha, 2x Peito de Frango) - R$19,00\n4-X-Cheedar (1x Hamburguer, 3x Queijo Cheedar, 1x Tomate, 1x Alface) - R$16,00.\nInforme o nome do lanche desejado."
+  utter_address:
+  - text: "Qual seu endereço?"
+  utter_number:
+  - text: "Qual o numero de sua residencia?"
+  utter_district:
+  - text: "Qual o seu bairro?"
+  utter_reference:
+  - text: "Qual a referencia?"
+  utter_cpf:
+  - text: "Me informe o CPF (com pontuação e traço, exemplo: 123.456.789-21), para verificar se há um cadastro no sistema."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+#Formulario para coleta de cada parte do endereço do cliente, sendo: rua, numero, bairro, referencia
+slots:
+  # address:
+  #   type: text
+  #   mappings:
+  #   - type: from_text
+  #     entity: address
+  #     conditions:
+  #     - active_loop: address_form
+  #       requested_slot: address
+  # number:
+  #   type: text
+  #   mappings:
+  #   - type: from_text
+  #     entity: number
+  #     conditions:
+  #     - active_loop: address_form
+  #       requested_slot: number
+  # district:
+  #   type: text
+  #   mappings:
+  #   - type: from_text
+  #     entity: district
+  #     conditions:
+  #     - active_loop: address_form
+  #       requested_slot: district
+  # reference:
+  #   type: text
+  #   mappings:
+  #   - type: from_text
+  #     entity: reference
+  #     conditions:
+  #     - active_loop: address_form
+  #       requested_slot: reference
+  name_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name_entity
+  # phone:
+  #   type: text
+  #   mappings:
+  #   - type: from_text
+  #     entity: phone
+  #     conditions:
+  #     - active_loop: info_form
+  #       requested_slot: phone
+  cpf_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: cpf_entity
+  positive_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: positive_entity
+  negative_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: negative_entity
+  hamburguer_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hamburguer_entity
